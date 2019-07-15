@@ -21,12 +21,6 @@ public class ParkingBoy {
 
     public Ticket park(ArrayList<ParkingLot> parkingLotsarrayList, Car car) {
         Ticket ticket  = null;
-//        for(int i = 0;i<parkingLotsarrayList.size();i++){
-//            ticket= parkingLotsarrayList.get(i).park(car);
-//            if(ticket!=null){
-//                break;
-//            }
-//        }
         for(ParkingLot parkingLot: parkingLotsarrayList){
             ticket = parkingLot.park(car);
             if(ticket!=null){
