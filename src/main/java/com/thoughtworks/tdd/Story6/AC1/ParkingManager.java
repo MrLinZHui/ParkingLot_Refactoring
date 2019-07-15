@@ -53,12 +53,7 @@ public class ParkingManager extends ParkingBoy{
 
     public Car pointFetch(ParkingBoy parkingBoy, Ticket ticket) {
         ParkingLot parkingLot = null;
-        for(int i = 0;i<parkingBoy.getParkingLotArrayList().size();i++){
-            parkingLot= parkingBoy.getParkingLotArrayList().get(i);
-            if(parkingLot.getCarMap().containsKey(ticket.getTicketnum())){
-                break;
-            }
-        }
+        parkingLot=parkingBoy.getParkingLotArrayList().stream().filter(parkingLot1 -> parkingLot1.getCarMap().containsKey(ticket.getTicketnum())).findFirst().get();
         if(parkingLot!=null){
             return parkingBoy.getCar(parkingLot,ticket);
         }
