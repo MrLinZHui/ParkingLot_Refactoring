@@ -5,6 +5,8 @@ import java.util.Optional;
 
 public class ParkingBoy {
     private static final String NOT_ENOUGH_POSITION = "Not enough position.";
+    private static final String PLEASE_PROVIDE_YOUR_PARKING_TICKET = "Please provide your parking ticket.";
+    private static final String UNRECOGNIZED_PARKING_TICKET = "Unrecognized parking ticket.";
     private ArrayList<ParkingLot> parkingLotArrayList;
 
     public ParkingBoy() {
@@ -39,10 +41,10 @@ public class ParkingBoy {
 
     public void recognizedticket(Ticket ticket) {
         if(ticket==null){
-            System.out.print("Please provide your parking ticket.\n");
+            System.out.print(PLEASE_PROVIDE_YOUR_PARKING_TICKET + "\n");
         }
         else if(!ticket.isStatus()){
-            System.out.print("Unrecognized parking ticket.\n");
+            System.out.print(UNRECOGNIZED_PARKING_TICKET + "\n");
         }
     }
 }
