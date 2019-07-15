@@ -29,11 +29,8 @@ public class ParkingLot {
     }
 
     public Ticket park(Car car) {
-        if(car ==null){
+        if(car ==null || !car.isCarparkstatus()){
           throw  new RuntimeException();
-        }
-        if(!car.isCarparkstatus()){
-            throw  new RuntimeException();
         }
         if(actualcapacity<capacity) {
             Ticket ticket = new Ticket();
