@@ -15,12 +15,12 @@ public class ParkingManager extends ParkingBoy{
         this.parkingBoyArrayList.add(parkingBoy);
     }
 
-    public ArrayList<ParkingBoy> getParkingBoyArrayList() {
-        return parkingBoyArrayList;
-    }
-
     public void setParkingBoyArrayList(ArrayList<ParkingBoy> parkingBoyArrayList) {
         this.parkingBoyArrayList = parkingBoyArrayList;
+    }
+
+    public ArrayList<ParkingBoy> getParkingBoyArrayList() {
+        return parkingBoyArrayList;
     }
 
     public ArrayList<ParkingLot> getParkingLotArrayList() {
