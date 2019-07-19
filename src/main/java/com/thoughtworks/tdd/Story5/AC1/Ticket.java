@@ -35,9 +35,6 @@ public class Ticket {
     @Override
     public boolean equals(Object obj) {
         Ticket ticket = (Ticket)obj;
-        if(this.ticketnum ==((Ticket) obj).getTicketnum()){
-            return true;
-        }
-        return false;
+        return this.ticketnum.equals(((Ticket) obj).getTicketnum());
     }
 }
